@@ -11,7 +11,7 @@ RUN rosdep update
 WORKDIR /ws
 RUN mkdir -p src
 WORKDIR /ws/src
-RUN git clone --recurse-submodules https://github.com/alexberndt/sadg-controller.git
+RUN git clone --recurse-submodules https://github.com/boschresearch/sadg-controller.git
 WORKDIR /ws
 RUN rosdep install --from-paths src --ignore-src -r -y
 RUN python3 -m pip install -r src/sadg-controller/requirements.txt
